@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mystyle.css') }}" />
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+    <div class="navbar_colour">
+    <nav>
+        <a href="{{ url_for('index')}}" class="nav_button">SkillAPP</a>
+        <a href="#" class="right_style">About</a>
+    </nav>
+    </div>
+      {% block content %} {% endblock %}
+  </body>
+</html>
