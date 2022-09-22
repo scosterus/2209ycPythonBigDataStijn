@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/Mystyle.css') }}" />
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+    <div class="navbar_colour">
+    <nav>
+      <a style="font-family:Verdana" href="{{ url_for('index')}}" class="nav_button"><b>SkillAPP</b></a>
+      <a style="font-family:Verdana" href="#" class="right_style">About</a>
+    </nav>
+    <hr>
+    </div>
+      {% block content %} {% endblock %}
+  </body>
+</html>
