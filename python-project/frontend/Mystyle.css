@@ -1,7 +1,7 @@
 
-
 h1 {
-    color: rgb(96, 96, 96);
+    color: #886cab;
+    font-family:Verdana;
     text-align: center;
     padding: 10px;}
 
@@ -22,7 +22,8 @@ h1 {
     font-size: 20px;}
 
 .nav_button {
-    color: rgb(96, 96, 96); 
+    color: rgb(96, 96, 96);
+    font-size: 20px; 
     background-color: transparent; 
     text-decoration: none;}
 
@@ -46,13 +47,30 @@ h1 {
 .blocktext {
     margin-left: auto;
     margin-right: auto;
-    width: 180em;}
+    text-align:justify;
+    width: 18em;}
 
 .footer {
     position: fixed;
     left: 0;
+    right:0;
     bottom: 0;
     width: 100%;
     background-color: #886cab;
+    color: white;
+    text-align: right;
+    padding: 3px;
+    font-size: 5px;}
+
+
+
+.labelset {
+    background-color: white;
+    border: 2px solid #886cab;
     color: black;
-    text-align: center;}
+    padding: 8px 57px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;}
