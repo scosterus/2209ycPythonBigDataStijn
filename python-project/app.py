@@ -5,30 +5,30 @@ app = Flask(__name__)
 
 #mysql.server start
 #127.0.0.1
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'skillapp'
+#app.config['MYSQL_HOST'] = 'localhost'
+#app.config['MYSQL_USER'] = 'root'
+#app.config['MYSQL_PASSWORD'] = ''
+#app.config['MYSQL_DB'] = 'skillapp'
  
-mysql = MySQL(app)
+#mysql = MySQL(app)
 
-with app.app_context():
-    cursor = mysql.connection.cursor()
+#with app.app_context():
+    #cursor = mysql.connection.cursor()
 
 #Statements
 #cursor.execute("CREATE DATABSE skillapp")
 #cursor.execute(''' CREATE TABLE table_name(field1, field2...) ''')
-cursor.execute("CREATE TALBLE users (name VARCHAR(255), age int(3), endurance int(11), strength int(11), power int(11), speed int(11), agility int(11), nerve int(11), durability int(11), hand-eye-co int(11), analytical-appr int(11))")
+#cursor.execute("CREATE TALBLE users (name VARCHAR(255), age int(3), endurance int(11), strength int(11), power int(11), speed int(11), agility int(11), nerve int(11), durability int(11), hand-eye-co int(11), analytical-appr int(11))")
 #cursor.execute(''' INSERT INTO table_name VALUES(v1,v2...) ''')
 #cursor.execute(''' DELETE FROM table_name WHERE condition ''')
  
 #Saving the Actions performed on the DB
-mysql.connection.commit()
+#mysql.connection.commit()
  
 #Closing the cursor
-cursor.close()
+#cursor.close()
 
-print("done")
+#print("done")
 
 @app.route("/")
 def index():
@@ -49,3 +49,8 @@ def fits():
 @app.route("/home")
 def home():
     return render_template('home.html')
+
+@app.route("/about")
+def about():
+    return render_template('about.html')
+
