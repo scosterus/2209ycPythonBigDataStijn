@@ -9,11 +9,11 @@
     <div class="navbar_colour">
     <nav>
       <a style="font-family:Verdana" href="{{ url_for('index')}}" class="nav_button"><b>SkillAPP</b></a>
-      <a style="font-family:Verdana" href="#" class="right_style">About</a>
+      <a style="font-family:Verdana" href="{{ url_for('about')}}" class="right_style">About</a>
     </nav>
     <hr>
     </div>
-    <div class="blocktext">
+    <div class="blocktext centreren">
       {% block content %} {% endblock %}
     </div>
     <div class="footer">
