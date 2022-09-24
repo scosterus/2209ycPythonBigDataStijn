@@ -6,6 +6,7 @@
     <title>SkillAPP</title>
   </head>
   <body>
+
     <div class="navbar_colour">
     <nav>
       <a style="font-family:Verdana" href="{{ url_for('index')}}" class="nav_button"><b>SkillAPP</b></a>
@@ -13,8 +14,13 @@
     </nav>
     <hr>
     </div>
+
+
+    
     <div class="centreren">
         <br><h1 style="font-family:Verdana">Generated sport</h1><br>
+      </div>
+
         <div class="blocktext">
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                 Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, 
@@ -24,19 +30,26 @@
                 Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
                 porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. 
                 Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. 
-                Curabitur ullamcorper ultricies nisi. Nam eget dui.<br><br>Make an account to join the community!</p><br>
+                Curabitur ullamcorper ultricies nisi. Nam eget dui.</p><br>
             </div>
-    <div class="blocktext">
-        <label for="fname">location</label><br>
-        <input class="labelset" type="text" required id="fname" name="fname"><br><br>
-        <label for="age">email</label><br>
-        <input class="labelset" type="number" required id="lage" age="lage" maxlength="3"><br><br>
-        <label for="age">password</label><br>
-        <input class="labelset" type="number" required id="lage" age="lage" maxlength="3"><br><br><br>
+
+          <div class="centreren">
+            <p>Make an account to join the community!</p><br><br>
+          </div>
+
+    <div class="centreren">
+        <input class="labelset" type="text" required id="fname" name="fname" placeholder="Location"><br><br>
+        <input class="labelset" type="text" required id="lage" age="lage" placeholder="Email"><br><br>
+        <input class="labelset" type="password" required id="lage" age="lage" placeholder="Password"><br><br>
         <input type="button" onclick="window.location.href='http://127.0.0.1:5000/quiz';" class="startbutton startbutton:hover" value="Join">
-      </div><br><br><br><br><br>
+      </div><br><br><br><br>
+
+
+
         <div class="footer">
       <p></p>
     </div>
+
+
   </body>
 </html>
