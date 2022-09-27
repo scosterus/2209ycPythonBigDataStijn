@@ -2,7 +2,7 @@ import pandas as pd
 
 def interpret_results():
 
-    # is half pseudocode om m'n idee uit te werken, runt niet.
+    # is half pseudocode om idee uit te werken, runt niet.
     newlist = []
     if user.endurance >= 6.5:
         newlist.append(sports[sports.endurance >= 6.5])
