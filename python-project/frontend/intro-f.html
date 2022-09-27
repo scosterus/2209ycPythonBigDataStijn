@@ -5,11 +5,18 @@
     <link rel="stylesheet" href="Mystyle.css">
     <title>SkillAPP</title>
   </head>
+  <script>
+    function vnaam(){
+      var x = document.getElementById("vnaam").value;
+      var y = document.getElementById("age").value;
+      fetch("http://127.0.0.1:5000/intro/"+x+"/"+y)
+    }
+  </script>
   <body>
     <div class="navbar_colour">
     <nav>
       <a style="font-family:Verdana" href="{{ url_for('index')}}" class="nav_button"><b>SkillAPP</b></a>
-      <a style="font-family:Verdana" href="{{ url_for('about')}}" class="right_style">About</a>
+      <!-- <a style="font-family:Verdana" href="{{ url_for('about')}}" class="right_style">About</a> -->
     </nav>
     <hr>
     </div>
@@ -19,24 +26,16 @@
         <div class="column blocktext">
             <br><br><br><h1 class="left">Introduction</h1>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, 
-                nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-                Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
-                In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. 
-                Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
-                porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. 
-                Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. 
-                Curabitur ullamcorper ultricies nisi. Nam eget dui.</p>
+                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, </p>
         </div>
 
 
 
             <div class="column centreren">
-              <br><br><br><br><br><br><br><br><br><form action="#">
-                    <input class="labelset" type="text" required id="fname" name="fname" placeholder="Name"><br><br>
-                    <input class="labelset" type="number" required id="lage" age="lage" maxlength="3" placeholder="Age"><br><br>
-                    <input type="button" onclick="window.location.href='http://127.0.0.1:5000/quiz';" class="startbutton startbutton:hover" value="Start">
-                  </form>
+              <br><br><br><br><br><br><br><br><br>
+                    <input class="labelset" type="text" placeholder="Name" value="" id="vnaam"><br><br>
+                    <input class="labelset" type="number" required maxlength="3" placeholder="Age" id="age"><br><br>
+                    <input type="button" onclick="vnaam()" class="startbutton startbutton:hover" value="Start">
             </div>
 
 
