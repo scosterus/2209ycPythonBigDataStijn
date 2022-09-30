@@ -91,9 +91,9 @@ h1.left {
 
 
 .startbutton {
-    background-color: white;
+    background-color: #886cab;
     border: 2px solid #886cab;
-    color: #886cab;
+    color: white;
     border-radius: 25px;
     padding: 8px 123px;
     text-align: center;

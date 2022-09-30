@@ -5,6 +5,19 @@
     <link rel="stylesheet" href="Mystyle.css">
     <title>SkillAPP</title>
   </head>
+  <script>
+    function speed(){
+      var x = document.getElementById("less").value;
+      fetch("http://127.0.0.1:5000/quiz/"+x)
+      var y = document.getElementById("mid").value;
+      fetch("http://127.0.0.1:5000/quiz/"+y)
+      var z = document.getElementById("more").value;
+      fetch("http://127.0.0.1:5000/quiz/"+z)
+    }
+    function paginafits(){
+      onclick=window.location.href='fits-f.html';
+    }
+  </script>
   <body>
     <div class="navbar_colour">
     <nav>
@@ -16,8 +29,9 @@
     <div>
         <br><h1 style="font-family:Verdana">Choose the skill that fits you the most.</h1><br>
         <div class="centreren">
-            <button type="button" onclick="window.location.href='http://127.0.0.1:5000/fits';" class="button button:hover" style="margin:15px;">Flexibility</button>
-            <button type="button" onclick="window.location.href='http://127.0.0.1:5000/fits';" class="button button:hover" style="margin:15px;">Strength</button>
+            <button type="button" id="less" onclick="speed(); paginafits()" class="button button:hover" style="margin:15px;" value="4">Speed <4</button>
+            <button type="button" id="mid" onclick="speed(); paginafits()" class="button button:hover" style="margin:15px;" value="47">Speed 4 <=> 7</button>
+            <button type="button" id="more" onclick="speed(); paginafits()" class="button button:hover" style="margin:15px;" value="7">Speed 7></button>
             </div>
       </div>
         <div class="footer">
