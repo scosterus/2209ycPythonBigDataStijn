@@ -49,10 +49,12 @@ def interpret_results():
 # Hand-eye coordination
 # When someone throws you a ball, you are
 # a) confident you'll catch it (6+)
-# b) nervous, you're not great at catching things (6-)
+# b) focused, you'll probably catch it if you pay attention (6-)
+# c) nervous, you're not usually good at catching things
 
 # Analytical aptitude
 # Do you like to think about tactics? (puzzles, chess etc)
+# a) 
 # a) Yes, I love figuring out the best strategy (6+)
 # b) No, I don't want to think too much during my workout (6-)
 
