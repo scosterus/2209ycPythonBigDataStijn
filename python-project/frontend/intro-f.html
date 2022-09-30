@@ -11,6 +11,9 @@
       var y = document.getElementById("age").value;
       fetch("http://127.0.0.1:5000/intro/"+x+"/"+y)
     }
+    function paginaquiz1(){
+      onclick=window.location.href='quiz-f.html';
+    }
   </script>
   <body>
     <div class="navbar_colour">
@@ -35,7 +38,7 @@
               <br><br><br><br><br><br><br><br><br>
                     <input class="labelset" type="text" placeholder="Name" value="" id="vnaam"><br><br>
                     <input class="labelset" type="number" required maxlength="3" placeholder="Age" id="age"><br><br>
-                    <input type="button" onclick="vnaam()" class="startbutton startbutton:hover" value="Start">
+                    <input type="button" onclick="vnaam(); paginaquiz1()" class="startbutton startbutton:hover" value="Start">
             </div>
 
 
