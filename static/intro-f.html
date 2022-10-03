@@ -10,17 +10,21 @@
       var x = document.getElementById("vnaam").value;
       var y = document.getElementById("age").value;
       fetch("http://127.0.0.1:5000/intro/"+x+"/"+y)
+      .then(res => res.text()).then(data => {
+        localStorage.setItem("code", data)
+      })
     }
     function paginaquiz1(){
       onclick=window.location.href='quiz-f.html';
     }
-    function setlocalid(){
-      let deid = 6; //uit het veld halen
-      localStorage.setItem("hoidaar", deid)
-    }
-    function getlocalid(){
-      alert(localStorage.getItem("hoidaar"))
-    }
+
+    // function setlocalid(){
+    //   let deid = 6; //uit het veld halen
+    //   localStorage.setItem("hoidaar", deid)
+    // }
+    // function getlocalid(){
+    //   alert(localStorage.getItem("hoidaar"))
+    // }
   </script>
   <body>
     <div class="navbar_colour">
@@ -46,7 +50,6 @@
                     <input class="labelset" type="text" placeholder="Name" value="" id="vnaam"><br><br>
                     <input class="labelset" type="number" required maxlength="3" placeholder="Age" id="age"><br><br>
                     <input type="button" onclick="vnaam(); paginaquiz1()" class="startbutton startbutton:hover" value="Start">
-                    <input type="button" onclick="setlocalid(); getlocalid()" class="startbutton startbutton:hover" value="test">
             </div>
 
 
@@ -60,7 +63,7 @@
   </body>
 </html>
 
-function g(){
+<!-- function g(){
 fetch('http://nos.nl/alleberichten')
 .then(res=> res.json())
 .then(data => anderefunctie(data.id))
@@ -69,3 +72,5 @@ fetch('http://nos.nl/alleberichten')
 function anderefunctie(hetid){
   localStorage.setItem("hoi", hetid)
 }
+
+<input type="button" onclick="setlocalid(); getlocalid()" class="startbutton startbutton:hover" value="test"> -->
