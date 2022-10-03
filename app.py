@@ -25,13 +25,20 @@ print("Done!")
 def index():
     return "hallo"
 
+# When this URL is called, the function intro() will run
+# The function intro() will create a new item in the database with the parameters given in the URL
+# The function will return the id of the newly created user
+# So when the URL is called, an id will be returned
 @app.route("/intro/<vnaam>/<age>")
 def intro(vnaam,age):
+    # create new item in database, assign values name and age
     mycursor.execute("INSERT INTO users (name, age) VALUES ('%s', '%s')" % (vnaam, age))
     db.commit()
+    # get corresponding id of new user from the database and assign it to variable id
     mycursor.execute("SELECT MAX(ID) FROM users")
     id = mycursor.fetchone()[0]
     print(id, vnaam, age, "added")
+    # let this function return the id, so when this function is called you will get the id back
     return id
 
 @app.route("/quiz/<speed>/<id>")
