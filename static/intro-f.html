@@ -6,11 +6,22 @@
     <title>SkillAPP</title>
   </head>
   <script>
+
+    // This function gets the name and age from the html form 
+    // Then the intro url/function is called to insert the user in the database
+    // The calling the url returns the user id which is saved in localstorage
     function vnaam(){
+      // Get name and age elements from the html and assign them to x and y
       var x = document.getElementById("vnaam").value;
       var y = document.getElementById("age").value;
+      // Call the URL that goes to the function intro() in python and give name and age as arguments in the url
+      // We should probably change this to a relative path if that's possible?
       fetch("http://127.0.0.1:5000/intro/"+x+"/"+y)
+      // The then method will save the return value of intro() (the id) in the variable 'data'
       .then(res => res.text()).then(data => {
+        // Here we set a new item in local storage
+        // A local storage item is an key/value pair that is saved in the user's browser
+        // The key is set to 'code' and the value is data (which is the id, the result of calling intro())
         localStorage.setItem("code", data)
       })
     }
